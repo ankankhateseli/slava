@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @-webkit-keyframes rotating
+
+        /* Safari and Chrome */
+            {
+            from {
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotating {
+            from {
+                -ms-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            to {
+                -ms-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        img {
+            width: 90vw;
+            height: fit-content;
+        }
+
+        .rotating {
+            -webkit-animation: rotating 80s linear infinite;
+            -moz-animation: rotating 80s linear infinite;
+            -ms-animation: rotating 80s linear infinite;
+            -o-animation: rotating 80s linear infinite;
+            animation: rotating 80s linear infinite;
+        }
+
+        body {
+            background-color: #704d96;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 100vh;
+        }
+        audio{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <audio controls autoplay>
+        <source src="./Hector Gachan - Nice Guy.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <img class="rotating" src="./cold, smooth & tasty..gif" alt="" srcset="">
+</body>
+
+</html>

@@ -63,18 +63,32 @@
             overflow: hidden;
             height: 100vh;
         }
-        audio{
+
+        audio {
             display: none;
         }
     </style>
 </head>
 
 <body>
-    <audio controls autoplay preload="auto">
+    <audio controls  preload="auto">
         <source src="./Hector Gachan - Nice Guy.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
-    <img class="rotating" src="./cold, smooth & tasty..gif" alt="" srcset="">
+    </audio>
+    <img  src="./cold, smooth & tasty..gif" alt="" srcset="">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(() => {
+            $("body").on("click", function () {
+                $('audio')[0].play(); // Stop playing
+                $('audio')[0].currentTime = 0; // Reset time
+                $('img').addClass('rotating')
+            })
+
+        })
+    </script>
 </body>
 
 </html>

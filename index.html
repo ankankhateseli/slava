@@ -70,6 +70,8 @@
             align-items: center;
             overflow: hidden;
             height: 100vh;
+            margin: 0px;
+            padding: 0px;
         }
 
         audio {
@@ -93,9 +95,9 @@
                 $('audio')[0].play(); // Stop playing
                 $('audio')[0].currentTime = 0; // Reset time
                 $('img').removeClass('rotating')
-                
-                setTimeout(()=>
-                $('img').addClass('rotating'))
+
+                setTimeout(() =>
+                    $('img').addClass('rotating'))
                 console.log($('img'))
             })
 
